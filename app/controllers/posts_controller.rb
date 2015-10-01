@@ -2,9 +2,17 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+<<<<<<< HEAD
     # @posts = Post.includes(:comments, {comments: :replies})
     @posts = Post.includes([comments: :replies])
 
+=======
+    @posts = Post.where(published: params[:status] == 'published')
+      .search(params[:search])
+      .page(params[:page])
+      .per(15)
+    logger.info("Params search is #{params[:search]}")
+>>>>>>> 737bf78bff13bb56a3e7787f55e26855c746a344
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
