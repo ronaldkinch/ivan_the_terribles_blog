@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 3.2.13'
+# gem 'rails', '4.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'rails_12factor', group: :production
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,6 +34,7 @@ end
 group :test do
   gem 'test-unit'
   gem 'ruby-prof'
+  gem 'rails-perftest'
 end
 
 group :development do

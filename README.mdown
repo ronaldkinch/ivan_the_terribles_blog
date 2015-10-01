@@ -1,3 +1,8 @@
+# By Ronald Kinch
+Deployed at ivan-blog-rlk.herokuapp.com
+Added Eager Loading
+Added render reduction
+
 # My New Blog!
 
 I've got a lot to say, and now I have a place to say it!!!!!
