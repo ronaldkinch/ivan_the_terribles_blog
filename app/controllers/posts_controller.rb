@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    params[:status] = ['published', 'unpublished'].detect do |s|
+      s == params[:status] end || 'published'
     # @posts = Post.includes(:comments, {comments: :replies})
     # @posts = Post.includes([comments: :replies])
 
