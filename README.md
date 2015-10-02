@@ -16,6 +16,11 @@ But now security auditors are telling me I have some security vulnerabilities! T
 
 What do I do to fix it???
 
+SQL Injection fix put a ? in the SQL where and use array to fill ?
+=> where("title like ?", "%#{search}%")
+
+XSS attack turn on XSS-Protection in application controller
+=> response.headers['X-XSS-Protection'] = '1'
 
 XSS:
 ```
